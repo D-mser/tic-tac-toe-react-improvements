@@ -5,3 +5,5 @@ A possible implementation for the improvements listed in [Tutorial: Intro to Rea
 * Rewrite Board to use two loops to make the squares instead of hardcoding them.
 * When someone wins, highlight the three squares that caused the win.
 * When no one wins, display a message about the result being a draw.
+
+![demo](https://github.com/D-mser/tic-tac-toe-react-improvements/blob/main/public/tic-tac-toe.gif)
