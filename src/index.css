@@ -1,102 +1,87 @@
 body {
-	font: 14px "Century Gothic", Futura, sans-serif;
-	margin: 20px;
-}
-
-ol {
-	padding-inline-start: 15px;
+  background-color: #f8f8f8;
 }
 
 .board-row:after {
-	clear: both;
-	content: "";
-	display: table;
+  clear: both;
+  content: "";
+  display: table;
 }
 .status:before {
-	content: '';
-	width: 0;
-	height: 0;
-	border-top: 5px solid transparent;
-	border-left: 5px solid #9ba892;
-	border-bottom: 5px solid transparent;
-	border-right: 5px solid transparent;
-	display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 5px solid #3f51b5;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  display: inline-block;
 }
 .status {
-	margin: auto;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.history {
+  margin-top: 10px;
 }
 
 .square {
-	background: #fff;
-	border: 1px solid #999;
-	float: left;
-	font-size: 24px;
-	font-weight: bold;
-	line-height: 34px;
-	height: 34px;
-	margin-right: -1px;
-	margin-top: -1px;
-	padding: 0;
-	text-align: center;
-	width: 34px;
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
 }
 
 .square:focus {
-	outline: none;
+  outline: none;
 }
 
 .kbd-navigation .square:focus {
-	background: #ddd;
+  background: #ddd;
 }
 
 .game {
-	display: flex;
-	flex-direction: row;
+  display: grid;
+  grid-template-areas: "info board";
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  height: 50vh;
+  grid-template-rows: 1fr;
+  top: 20%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -20%);
+}
+
+.game-board {
+  grid-area: board;
+  padding: 20px;
 }
 
 .game-info {
-	margin-left: 20px;
-	padding: 10px;
-	border: 1px solid #b2b8ad;
+  grid-area: info;
+  padding: 20px;
+  margin-left: 20px;
 }
 
 .winning-combination {
-	color:#9ba892;
-	border: 2px solid #9ba892;
+  color: #3f51b5;
+  border: 2px solid #3f51b5;
 }
 
 .move {
-	box-shadow: inset 0px 0px 0px -3px #f2fadc;
-	background: linear-gradient(to bottom, #dbe6c4 5%, #9ba892 100%);
-	background-color:#dbe6c4;
-	border: 1px solid #b2b8ad;
-	cursor: pointer;
-	color:#414739;
-	font-family: Arial;
-	font-size: 12px;
-	padding: 6px 15px;
-	text-decoration: none;
-	text-shadow: 0px 1px 0px #ced9bf;
+  padding: 5px;
 }
 
-.move:hover {
-	background: linear-gradient(to bottom, #9ba892 5%, #dbe6c4 100%);
-	background-color:#9ba892;
-}
-
-.move:active {
-	position: relative;
-	top: 1px;
-}
-
-.bold-move {
-	font-weight: bold;
-	padding-left: 14.3px;
-	padding-right: 14.3px;
-}
-
-.start-game-separator {
-	margin-bottom: 10px;
-	margin-top: 10px;
-	width: 100%;
+li {
+  padding: 5px;
 }
